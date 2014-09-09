@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Map test</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="css/styles.css"/>
+</head>
+<body>
+    <div class="map">
+        <img src="img/map.jpg"/>
+        <div class="segment africa" data-area="Africa">
+            <div class="nub one"></div>
+            <div class="nub two"></div>
+            <div class="nub three"></div>
+        </div>
+
+        <div class="segment asia" data-area="Asia">
+            <div class="nub one"></div>
+            <div class="nub two"></div>
+            <div class="nub three"></div>
+            <div class="nub four"></div>
+        </div>
+
+        <div class="segment australasia" data-area="Australasia">
+            <div class="nub one"></div>
+            <div class="nub two"></div>
+        </div>
+
+        <div class="segment europe" data-area="Europe">
+            <div class="nub one"></div>
+            <div class="nub two"></div>
+            <div class="nub three"></div>
+        </div>
+
+        <div class="segment namerica" data-area="North America">
+            <div class="nub one"></div>
+            <div class="nub two"></div>
+            <div class="nub three"></div>
+            <div class="nub four"></div>
+        </div>
+        <div class="segment samerica" data-area="South America">
+            <div class="nub one"></div>
+            <div class="nub two"></div>
+        </div>
+    </div>
+    <div id="comment"></div>
+
+    <!-- Grab Google-hosted jQuery. Fall back to locally saved file if necessary. -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="static/js/vendor/jquery-1.10.2.min.js">\x3C/script>')</script>
+
+    <script>
+        $(document).ready(function(){
+            $('.nub').hover(
+                function(){
+                    $('.segment').removeClass('active');
+                    $(this).closest('.segment').addClass('active');
+                },
+                function(){
+                    $('.segment').removeClass('active');
+                }
+            );
+            $('.nub').on('click',function(){
+                $('#comment').html('You have selected ' + $(this).parent().attr('data-area'));
+                $('.segment').removeClass('active');
+                $(this).closest('.segment').addClass('active');
+            });
+        });
+    </script>
+
+</body>
+</html>

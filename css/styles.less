@@ -1,0 +1,456 @@
+
+    .map {
+        position:relative;
+        max-width:630px;
+        border:solid 1px #000;
+        img {
+            display:block;
+            max-width:100%;
+        }
+    }
+    .segment {
+        position:absolute;
+        //background-color:rgba(0,0,0,0.1);
+        background-repeat: no-repeat;
+        background-position:0 0;
+        background-size:100% 100%;
+    }
+    .nub {
+        display:block;
+        position:absolute;
+        top:0;
+        left:0;
+        //background:rgba(255,255,255,0.5);
+        background-image:url('nothing.jpg');
+        background-color:rgba(0,0,0,0.00001);
+        cursor:pointer;
+    }
+
+    @scaleFactor: 100;
+
+    @wAfrica: 19.2%;
+    @hAfrica: 45.3%;
+
+    @wAfrica1: 70%;
+    @hAfrica1: 45%;
+
+    @tAfrica2: 36%;
+    @lAfrica2: 36%;
+    @wAfrica2: 64%;
+    @hAfrica2: 64%;
+
+    @tAfrica3: 16%;
+    @lAfrica3: 70%;
+    @wAfrica3: 13%;
+    @hAfrica3: 20%;
+
+    .africa {
+        left: 42.8%;
+        top: 35.4%;
+        width: @wAfrica / @scaleFactor;
+        height: @hAfrica / @scaleFactor;
+
+        .nub {
+            &.one {
+                width: @wAfrica1 * @scaleFactor;
+                height: @hAfrica1 * @scaleFactor;
+            }
+            &.two {
+                top: @tAfrica2 * @scaleFactor;
+                left: @lAfrica2 * @scaleFactor;
+                width: @wAfrica2 * @scaleFactor;
+                height: @hAfrica2 * @scaleFactor;
+            }
+            &.three {
+                top: @tAfrica3 * @scaleFactor;
+                left: @lAfrica3 * @scaleFactor;
+                width: @wAfrica3 * @scaleFactor;
+                height: @hAfrica3 * @scaleFactor;
+            }
+        }
+
+
+        &.active {
+            width: @wAfrica;
+            height: @hAfrica;
+            background-image:url('../img/segment_africa.png');
+            .nub {
+                &.one {
+                    width: @wAfrica1;
+                    height: @hAfrica1;
+                }
+                &.two {
+                    top: @tAfrica2;
+                    left: @lAfrica2;
+                    width: @wAfrica2;
+                    height: @hAfrica2;
+                }
+                &.three {
+                    top: @tAfrica3;
+                    left: @lAfrica3;
+                    width: @wAfrica3;
+                    height: @hAfrica3;
+                }
+            }
+        }
+    }
+
+    @wAsia: 42.3%;
+    @hAsia: 57.6%;
+
+    @tAsia1: 42%;
+    @lAsia1: 0%;
+    @wAsia1: 10%;
+    @hAsia1: 14%;
+
+    @tAsia2: 0%;
+    @lAsia2: 8.1%;
+    @wAsia2: 70%;
+    @hAsia2: 75%;
+
+    @tAsia3: 69%;
+    @lAsia3: 45%;
+    @wAsia3: 29%;
+    @hAsia3: 31%;
+
+    @tAsia4: 3%;
+    @lAsia4: 71%;
+    @wAsia4: 29%;
+    @hAsia4: 31%;
+
+    .asia {
+        top:7.9%;
+        left:54.9%;
+        width: @wAsia / @scaleFactor;
+        height: @hAsia / @scaleFactor;
+
+        .nub {
+            &.one {
+                top: @tAsia1 * @scaleFactor;
+                left: @lAsia1 * @scaleFactor;
+                width: @wAsia1 * @scaleFactor;
+                height: @hAsia1 * @scaleFactor;
+            }
+            &.two {
+                top: @tAsia2 * @scaleFactor;
+                left: @lAsia2 * @scaleFactor;
+                width: @wAsia2 * @scaleFactor;
+                height: @hAsia2 * @scaleFactor;
+            }
+            &.three {
+                top: @tAsia3 * @scaleFactor;
+                left: @lAsia3 * @scaleFactor;
+                width: @wAsia3 * @scaleFactor;
+                height: @hAsia3 * @scaleFactor;
+            }
+            &.four {
+                top: @tAsia4 * @scaleFactor;
+                left: @lAsia4 * @scaleFactor;
+                width: @wAsia4 * @scaleFactor;
+                height: @hAsia4 * @scaleFactor;
+            }
+        }
+
+        &.active {
+            width: @wAsia;
+            height: @hAsia;
+            background-image:url('../img/segment_asia.png');
+            .nub {
+                &.one {
+                    top: @tAsia1;
+                    left: @lAsia1;
+                    width: @wAsia1;
+                    height: @hAsia1;
+                }
+                &.two {
+                    top: @tAsia2;
+                    left: @lAsia2;
+                    width: @wAsia2;
+                    height: @hAsia2;
+                }
+                &.three {
+                    top: @tAsia3;
+                    left: @lAsia3;
+                    width: @wAsia3;
+                    height: @hAsia3;
+                }
+                &.four {
+                    top: @tAsia4;
+                    left: @lAsia4;
+                    width: @wAsia4;
+                    height: @hAsia4;
+                }
+            }
+        }
+    }
+    
+    @wAustralasia: 18.8%;
+    @hAustralasia: 28.9%;
+
+    @tAustralasia1: 19%;
+    @lAustralasia1: 0%;
+    @wAustralasia1: 40%;
+    @hAustralasia1: 58%;
+
+    @tAustralasia2: 0%;
+    @lAustralasia2: 39%;
+    @wAustralasia2: 61%;
+    @hAustralasia2: 100%;
+
+    .australasia {
+        top:59.9%;
+        left:78.6%;
+        width: @wAustralasia / @scaleFactor;
+        height: @hAustralasia / @scaleFactor;
+
+        .nub {
+            &.one {
+                top: @tAustralasia1 * @scaleFactor;
+                left: @lAustralasia1 * @scaleFactor;
+                width: @wAustralasia1 * @scaleFactor;
+                height: @hAustralasia1 * @scaleFactor;
+            }
+            &.two {
+                top: @tAustralasia2 * @scaleFactor;
+                left: @lAustralasia2 * @scaleFactor;
+                width: @wAustralasia2 * @scaleFactor;
+                height: @hAustralasia2 * @scaleFactor;
+            }
+        }
+
+        &.active {
+            width: @wAustralasia;
+            height: @hAustralasia;
+            background-image:url('../img/segment_australasia.png');
+            .nub {
+                &.one {
+                    top: @tAustralasia1;
+                    left: @lAustralasia1;
+                    width: @wAustralasia1;
+                    height: @hAustralasia1;
+                }
+                &.two {
+                    top: @tAustralasia2;
+                    left: @lAustralasia2;
+                    width: @wAustralasia2;
+                    height: @hAustralasia2;
+                }
+            }
+        }
+    }
+
+    @wEurope: 29.4%;
+    @hEurope: 30.6%;
+
+    @tEurope1: 0%;
+    @lEurope1: 0%;
+    @wEurope1: 51%;
+    @hEurope1: 49%;
+
+    @tEurope2: 24%;
+    @lEurope2: 51%;
+    @wEurope2: 37%;
+    @hEurope2: 76%;
+
+    @tEurope3: 24%;
+    @lEurope3: 88%;
+    @wEurope3: 12%;
+    @hEurope3: 60%;
+
+    .europe {
+        top:6%;
+        left:29.1%;
+        width: @wEurope / @scaleFactor;
+        height: @hEurope / @scaleFactor;
+
+        .nub {
+            &.one {
+                top: @tEurope1 * @scaleFactor;
+                left: @lEurope1 * @scaleFactor;
+                width: @wEurope1 * @scaleFactor;
+                height: @hEurope1 * @scaleFactor;
+            }
+            &.two {
+                top: @tEurope2 * @scaleFactor;
+                left: @lEurope2 * @scaleFactor;
+                width: @wEurope2 * @scaleFactor;
+                height: @hEurope2 * @scaleFactor;
+            }
+            &.three {
+                top: @tEurope3 * @scaleFactor;
+                left: @lEurope3 * @scaleFactor;
+                width: @wEurope3 * @scaleFactor;
+                height: @hEurope3 * @scaleFactor;
+            }
+        }
+
+        &.active {
+            width: @wEurope;
+            height: @hEurope;
+            background-image:url('../img/segment_europe.png');
+            .nub {
+                &.one {
+                    top: @tEurope1;
+                    left: @lEurope1;
+                    width: @wEurope1;
+                    height: @hEurope1;
+                }
+                &.two {
+                    top: @tEurope2;
+                    left: @lEurope2;
+                    width: @wEurope2;
+                    height: @hEurope2;
+                }
+                &.three {
+                    top: @tEurope3;
+                    left: @lEurope3;
+                    width: @wEurope3;
+                    height: @hEurope3;
+                }
+            }
+        }
+    }
+    
+    @wNAmerica: 33.1%;
+    @hNAmerica: 47.6%;
+
+    @tNAmerica1: 15%;
+    @lNAmerica1: 0%;
+    @wNAmerica1: 92%;
+    @hNAmerica1: 30%;
+
+    @tNAmerica2: 11%;
+    @lNAmerica2: 40%;
+    @wNAmerica2: 32%;
+    @hNAmerica2: 76%;
+
+    @tNAmerica3: 0%;
+    @lNAmerica3: 57%;
+    @wNAmerica3: 30%;
+    @hNAmerica3: 99%;
+
+    @tNAmerica4: 33%;
+    @lNAmerica4: 76%;
+    @wNAmerica4: 22%;
+    @hNAmerica4: 57%;
+
+    .namerica {
+        top:5.1%;
+        left:0.3%;
+        width: @wNAmerica / @scaleFactor;
+        height: @hNAmerica / @scaleFactor;
+
+        .nub {
+            &.one {
+                top: @tNAmerica1 * @scaleFactor;
+                left: @lNAmerica1 * @scaleFactor;
+                width: @wNAmerica1 * @scaleFactor;
+                height: @hNAmerica1 * @scaleFactor;
+            }
+            &.two {
+                top: @tNAmerica2 * @scaleFactor;
+                left: @lNAmerica2 * @scaleFactor;
+                width: @wNAmerica2 * @scaleFactor;
+                height: @hNAmerica2 * @scaleFactor;
+            }
+            &.three {
+                top: @tNAmerica3 * @scaleFactor;
+                left: @lNAmerica3 * @scaleFactor;
+                width: @wNAmerica3 * @scaleFactor;
+                height: @hNAmerica3 * @scaleFactor;
+            }
+            &.four {
+                top: @tNAmerica4 * @scaleFactor;
+                left: @lNAmerica4 * @scaleFactor;
+                width: @wNAmerica4 * @scaleFactor;
+                height: @hNAmerica4 * @scaleFactor;
+            }
+        }
+
+        &.active {
+            width: @wNAmerica;
+            height: @hNAmerica;
+            background-image:url('../img/segment_namerica.png');
+            .nub {
+                &.one {
+                    top: @tNAmerica1;
+                    left: @lNAmerica1;
+                    width: @wNAmerica1;
+                    height: @hNAmerica1;
+                }
+                &.two {
+                    top: @tNAmerica2;
+                    left: @lNAmerica2;
+                    width: @wNAmerica2;
+                    height: @hNAmerica2;
+                }
+                &.three {
+                    top: @tNAmerica3;
+                    left: @lNAmerica3;
+                    width: @wNAmerica3;
+                    height: @hNAmerica3;
+                }
+                &.four {
+                    top: @tNAmerica4;
+                    left: @lNAmerica4;
+                    width: @wNAmerica4;
+                    height: @hNAmerica4;
+                }
+            }
+        }
+    }
+    
+    @wSAmerica: 17.2%;
+    @hSAmerica: 46.1%;
+
+    @tSAmerica1: 1%;
+    @lSAmerica1: 0%;
+    @wSAmerica1: 63%;
+    @hSAmerica1: 39%;
+
+    @tSAmerica2: 22%;
+    @lSAmerica2: 15%;
+    @wSAmerica2: 71%;
+    @hSAmerica2: 79%;
+
+    .samerica {
+        top:49.1%;
+        left:24%;
+        width: @wSAmerica / @scaleFactor;
+        height: @hSAmerica / @scaleFactor;
+
+        .nub {
+            &.one {
+                top: @tSAmerica1 * @scaleFactor;
+                left: @lSAmerica1 * @scaleFactor;
+                width: @wSAmerica1 * @scaleFactor;
+                height: @hSAmerica1 * @scaleFactor;
+            }
+            &.two {
+                top: @tSAmerica2 * @scaleFactor;
+                left: @lSAmerica2 * @scaleFactor;
+                width: @wSAmerica2 * @scaleFactor;
+                height: @hSAmerica2 * @scaleFactor;
+            }
+        }
+
+        &.active {
+            width: @wSAmerica;
+            height: @hSAmerica;
+            background-image:url('../img/segment_samerica.png');
+            .nub {
+                &.one {
+                    top: @tSAmerica1;
+                    left: @lSAmerica1;
+                    width: @wSAmerica1;
+                    height: @hSAmerica1;
+                }
+                &.two {
+                    top: @tSAmerica2;
+                    left: @lSAmerica2;
+                    width: @wSAmerica2;
+                    height: @hSAmerica2;
+                }
+            }
+        }
+    }
